@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Flex, ToggleButton } from "@/once-ui/components"
 import styles from '@/app/components/Header.module.scss'
 
-import { routes, display } from '@/app/resources'
+import { routes, display, gamesPortfolio } from '@/app/resources'
 import { person, home, about, blog, work, gallery } from '@/app/resources'
 
 type TimeDisplayProps = {
@@ -80,36 +80,13 @@ export const Header = () => {
                             <Flex paddingX="2" hide="s">{home.label}</Flex>
                         </ToggleButton>
                     )}
-                    { routes['/about'] && (
-                        <ToggleButton
-                            prefixIcon="person"
-                            href="/about"
-                            selected={pathname === "/about"}>
-                            <Flex paddingX="2" hide="s">{about.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/work'] && (
+
+                    { routes['/gamesPortfolio'] && (
                         <ToggleButton
                             prefixIcon="grid"
-                            href="/work"
-                            selected={pathname.startsWith('/work')}>
-                            <Flex paddingX="2" hide="s">{work.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/blog'] && (
-                        <ToggleButton
-                            prefixIcon="book"
-                            href="/blog"
-                            selected={pathname.startsWith('/blog')}>
-                            <Flex paddingX="2" hide="s">{blog.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/gallery'] && (
-                        <ToggleButton
-                            prefixIcon="gallery"
-                            href="/gallery"
-                            selected={pathname.startsWith('/gallery')}>
-                            <Flex paddingX="2" hide="s">{gallery.label}</Flex>
+                            href="/gamesPortfolio"
+                            selected={pathname.startsWith('/gamesPortfolio')}>
+                            <Flex paddingX="2" hide="s">{gamesPortfolio.label}</Flex>
                         </ToggleButton>
                     )}
                 </Flex>

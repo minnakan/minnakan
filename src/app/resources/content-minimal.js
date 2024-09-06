@@ -2,20 +2,20 @@ import { InlineCode } from "@/once-ui/components";
 import Link from 'next/link'
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Minnakan',
+    lastName:  'Seral',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Engineer and Game Developer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Engineer and Game Developer',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <></>
 }
 
 const social = [
@@ -176,6 +176,14 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
+const gamesPortfolio = {
+    label: 'Portfolio',
+    title: 'My projects',
+    description: `Game dev projects by ${person.name}`
+    // Create new project pages by adding a new .mdx file to app/blog/posts
+    // All projects will be listed on the /home and /work routes
+}
+
 const gallery = {
     label: 'Gallery',
     title: 'My photo gallery',
@@ -255,4 +263,4 @@ const gallery = {
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, gamesPortfolio };

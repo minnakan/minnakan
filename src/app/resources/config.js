@@ -4,8 +4,7 @@ const routes = {
     '/':        true,
     '/about':   true,
     '/work':    true,
-    '/blog':    true,
-    '/gallery': true,
+    '/gamesPortfolio':    true
 }
 
 // Enable password protection on selected routes

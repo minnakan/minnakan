@@ -17,6 +17,7 @@ import {
 	HiCheckCircle,
 	HiMiniGlobeAsiaAustralia,
 	HiEnvelope,
+	HiArrowDownCircle,
 	HiCalendarDays
 } from "react-icons/hi2";
 
@@ -62,4 +63,5 @@ export const iconLibrary: Record<string, IconType> = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
+	download:HiArrowDownCircle
 };

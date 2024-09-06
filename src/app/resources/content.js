@@ -1,21 +1,21 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Minnakan',
+    lastName:  'Seral',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
-    avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    role:      'Engineer and Game Developer',
+    avatar:    '/images/avatar.png',
+    location:  'America/Los_Angeles',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <></>
 }
 
 const social = [
@@ -24,12 +24,12 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/minnakan',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/minnakan-seral-b75779159/',
     },
     {
         name: 'X',
@@ -39,7 +39,12 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:minnakan@gmail.com',
+    },
+    {
+        name: 'Resume',
+        icon: 'download',
+        link: 'https://drive.google.com/file/d/1XGBYGMiYRXynBpma46Ufh2KMzGRM3r4H/view?usp=sharing',
     },
 ]
 
@@ -47,8 +52,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive user experiences. After hours, I build my own projects.</>
+    headline: <>Engineer and Game Developer</>,
+    subline: <></>
 }
 
 const about = {
@@ -56,70 +61,80 @@ const about = {
     title: 'About me',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
-        display: true,
+        display: false,
         subItems: true
     },
     avatar: {
-        display: true
+        display: false
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Computer engineer specializing in game development, VR, and immersive 3D experiences, with expertise in Unreal Engine, Unity, and cutting-edge reinforcement learning techniques.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Brain Game Center (UCR)',
+                timeframe: 'Mar 2024 - Present',
+                role: 'Unity Programming Intern',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Actively contributing as a part-time developer in creating cognitive-based games rooted in research conducted at the BGC.</>,
+                    <>Proficiently integrated tutorial screens and game components featuring dynamic animations and maintained consistent styling throughout various game projects.</>
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
+                images: []
+            },
+            {
+                company: 'Renderpub',
+                timeframe: 'Jan 2021 – Jul 2023',
+                role: 'Unreal Engine Developer',
+                achievements: [
+                    <>Developed a 3D rendering application for Arch-Viz using Unreal Engine 4.</>,
+                    <>Implemented key features including user authentication, sky/weather systems, and 3D model import/export.</>,
+                    <>Ported three.js to Unreal Engine to provide runtime scripting functionalities for the application.</>,
+                    <>Utilized OpenCV and Assimp for export functionalities and made API calls to upload files to an R2 bucket for web-based walkthroughs.</>,
+                    <>Led product development strategy, managing a team to deliver a beta version successfully.</>,
+                    <>Developed client projects, including a VR driving simulator and a multiplayer experience for the Oculus Quest, deploying a multiplayer server on AWS Gamelift.</>
+                ],
+                images: [
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
+                        src: '/images/projects/Work1/rp1.png',
+                        alt: 'RenderpubStudio1',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/Work1/rp2.png',
+                        alt: 'RenderpubStudio2',
                         width: 16,
                         height: 9
                     }
-                ]
-            },
-            {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
-                achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
-                ],
-                images: [ ]
+                 ]
             }
         ]
     },
     studies: {
         display: true, // set to false to hide this section
-        title: 'Studies',
+        title: 'Education',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'University of California, Riverside',
+                description: <>Master of Science in Computer Engineering</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'City, University of London',
+                description: <>BSc (Hons.) Computer Science with Games Technology</>,
             }
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
+        display: false, // set to false to hide this section
         title: 'Technical skills',
         skills: [
             {
@@ -168,6 +183,14 @@ const work = {
     label: 'Work',
     title: 'My projects',
     description: `Design and dev projects by ${person.name}`
+    // Create new project pages by adding a new .mdx file to app/blog/posts
+    // All projects will be listed on the /home and /work routes
+}
+
+const gamesPortfolio = {
+    label: 'Portfolio',
+    title: 'My projects',
+    description: `Game dev projects by ${person.name}`
     // Create new project pages by adding a new .mdx file to app/blog/posts
     // All projects will be listed on the /home and /work routes
 }
@@ -251,4 +274,4 @@ const gallery = {
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, gamesPortfolio };

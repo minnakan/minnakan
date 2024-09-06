@@ -58,7 +58,7 @@ export default function Work() {
                             '@type': 'CreativeWork',
                             headline: project.metadata.title,
                             description: project.metadata.summary,
-                            url: `https://${baseURL}/projects/${project.slug}`,
+                            url: project.metadata.publishedAt,
                             image: `${baseURL}/${project.metadata.image}`,
                         })),
                     }),
