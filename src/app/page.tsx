@@ -2,6 +2,7 @@ import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text 
 import { person, about, social, baseURL } from '@/app/resources'
 import TableOfContents from '@/app/about/components/TableOfContents';
 import styles from '@/app/about/about.module.scss'
+import { redirect } from 'next/navigation';
 
 export function generateMetadata() {
 	const title = 'Minnakan Seral';
@@ -56,6 +57,9 @@ const structure = [
 ]
 
 export default function Home() {
+    redirect('https://minnakan.com/');
+
+    // The code below won't execute due to the redirect
     return (
         <Flex
             fillWidth maxWidth="m"
